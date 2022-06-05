@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Password Generator</title>
+        <link rel="stylesheet" href="pass-gen.css">
+    </head>
+    <body>
+        <div class="mainContainer">
+            <h1 class="header">Password Generator</h1>
+            <div id="showResult" contenteditable="true">CLICK GENERATE</div>
+            <div id="length">LENGTH <span id="demo"></span> </div>
+            <div id="lengthContainer"><input type="range" id="lengthInput" min="4" max="50" value="0" class="sliderLength"></div>
+            <div class="setting">SETTINGS </div>
+            <div id="upperCase"><div class="inner">Include Uppercase</div> 
+                <div>
+                        <label class="switch">
+                        <input type="checkbox" id="checkUp">
+                        <span class="slider"></span>
+                        </label>
+                </div>
+            </div>
+            <div id="lowerCase"><div class="inner">Include Lowercase</div>
+                <div>
+                        <label class="switch">
+                        <input type="checkbox" id="checkLow">
+                        <span class="slider"></span>
+                        </label>
+                </div>
+            </div>
+            <div id="numbers"><div class="inner">Include Numbers</div>
+                <div>
+                        <label class="switch">
+                        <input id="checkNum" type="checkbox">
+                        <span class="slider"></span>
+                        </label>
+                </div>
+            </div>
+            <div id="symbols"><div class="inner">Include Symbols</div>
+                <div>
+                        <label class="switch">
+                        <input type="checkbox" id="checkSym">
+                        <span class="slider"></span>
+                        </label></div>
+                </div>
+            <button id="generatePass" onclick="generate()" ><b>GENERATE PASSWORD</b></button>
+            <button id="resetPass" onclick="reset()" ><b>RESET PASSWORD</b></button>
+        </div>
+    </body>
+    <script src="pass-gen.js" defer></script>
+</html>

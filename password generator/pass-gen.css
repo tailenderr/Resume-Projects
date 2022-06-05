@@ -1,0 +1,202 @@
+body{
+    background-color: darkcyan;
+}
+.mainContainer{
+    width: 400px;
+    height: 640px;
+    border: 1px solid rgb(14, 14, 61);
+    background-color: rgb(14, 14, 61);
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-left: 570px;
+    border-radius: 10px;
+    outline: 5px solid darkolivegreen;
+}
+.header{
+    color: white;
+    margin-left: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#showResult{
+    color: white;
+    text-align: center;
+    border: 1px solid black;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 350px;
+    height: 40px;
+    margin-left: 27px;
+    padding-top: 20px;
+    border-radius: 10px;
+    background-color: rgba(128, 128, 128, 0.26);
+}
+#length{
+    margin-top: 15px;
+    margin-left: 40px;
+    color: white;
+}
+#lengthContainer{
+    color: white;
+    border: 1px solid black;
+    width: 350px;
+    height: 40px;
+    margin-left: 27px;
+    padding-top: 20px;
+    border-radius: 10px;
+    background-color: rgba(128, 128, 128, 0.26);
+}
+.setting{
+    margin-top: 15px;
+    margin-left: 40px;
+    color: white;
+}
+#upperCase{
+    color: white;
+    border: 1px solid black;
+    width: 350px;
+    height: 50px;
+    display:flex;
+    justify-content: space-around;
+    margin-left: 27px;
+    border-radius: 10px;
+    background-color: rgba(128, 128, 128, 0.26);
+}
+#lowerCase{
+    color: white;
+    border: 1px solid black;
+    width: 350px;
+    height: 50px;
+    display:flex;
+    justify-content: space-around;
+    margin-top:10px;
+    margin-left: 27px;
+    border-radius: 10px;
+    background-color: rgba(128, 128, 128, 0.26);
+}
+#numbers{
+    color: white;
+    border: 1px solid black;
+    width: 350px;
+    height: 50px;
+    display:flex;
+    justify-content: space-around;
+    margin-top:10px;
+    margin-left: 27px;
+    border-radius: 10px;
+    background-color: rgba(128, 128, 128, 0.26);
+}
+#symbols{
+    color: white;
+    border: 1px solid black;
+    width: 350px;
+    height: 50px;
+    display:flex;
+    justify-content: space-around;
+    margin-top:10px;
+    margin-left: 27px;
+    border-radius: 10px;
+    background-color: rgba(128, 128, 128, 0.26);
+}
+#generatePass{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid black;
+    cursor: pointer;
+    font-size: 14px;
+    width: 350px;
+    height: 45px;
+    margin-top:15px;
+    margin-left: 27px;
+    border-radius: 10px;
+    background-color: rgb(143, 94, 199);
+}
+#resetPass{
+  color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid black;
+    cursor: pointer;
+    font-size: 14px;
+    width: 350px;
+    height: 45px;
+    margin-top:15px;
+    margin-left: 27px;
+    border-radius: 10px;
+    background-color: rgb(143, 94, 199); 
+}
+.switch {
+    position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 31px;
+  margin-left: 80px;
+  margin-top: 9px;
+  background-color: blueviolet;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(138, 125, 125);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+input:checked + .slider {
+  background-color: #2196F3;
+}
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+input:checked + .slider:before {
+  -webkit-transform: translateX(22px);
+  -ms-transform: translateX(22px);
+  transform: translateX(22px);
+}
+.inner{
+    margin-top: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.sliderLength:hover {
+    opacity: 1;
+}
+.sliderLength {
+    -webkit-appearance:none;
+    margin-left: 23px;
+    width: 300px;
+    height: 1px;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity 0.2s;
+}
+.sliderLength::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #04AA6D;
+    cursor: pointer;
+  }
+  .sliderLength::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #04AA6D;
+    cursor: pointer;
+  }

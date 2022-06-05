@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>I'm not a robot</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="notarobot.css">
+    </head>
+    <body>
+        <div class="mainContainer">
+            <div class="headContainer"><h3 class="heading">Please click on the identical tiles to verify that you are not a robot</h3></div>
+            <div class="imgContainer">
+                <div class="imgBox"><img data-ns-test="" class="img" src="" onclick="selectImg(this.id)" id="num1" alt="image1"></div>
+                <div class="imgBox"><img data-ns-test="" class="img" src="" onclick="selectImg(this.id)" id="num2" alt="image2"></div>
+                <div class="imgBox"><img data-ns-test="" class="img" src="" onclick="selectImg(this.id)" id="num3" alt="image3"></div>
+                <div class="imgBox"><img data-ns-test="" class="img" src="" onclick="selectImg(this.id)" id="num4" alt="image4"></div>
+                <div class="imgBox"><img data-ns-test="" class="img" src="" onclick="selectImg(this.id)" id="num5" alt="image5"></div>
+                <div class="imgBox"><img data-ns-test="" class="img" src="" onclick="selectImg(this.id)" id="num6" alt="image6"></div>
+            </div>
+            <div class="end">
+                <p id="para"></p>
+                <div id="buttons">
+                    <button id="btn" onclick="verifyImg()">Verify</button>
+                    <button id="reset" onclick="reset()">Reset</button>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script defer src="notarobot.js"></script>
+</html>
