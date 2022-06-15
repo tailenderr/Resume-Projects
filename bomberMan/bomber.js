@@ -24,6 +24,8 @@ class Particle {
     this.density = Math.random() * 40 + 5;
     this.baseX = this.x;
     this.baseY = this.y;
+    this.MouseX = mouse.x - this.x;
+    this.MouseY = mouse.y - this.y;
   }
   draw() {
     ctx.fillStyle = "white";
@@ -59,7 +61,7 @@ class Particle {
 ctx.fillStyle = "white";
 ctx.font = "20px Verdana";
 ctx.textAlign = "centre";
-ctx.fillText("Bomber-Man", canvas.width / 110, 20);
+ctx.fillText("Bomber-Man", canvas.width / 120, 20);
 // ctx.strokeStyle = "white";
 // ctx.strokeRect(0, 0, 200, 200);
 
@@ -82,10 +84,25 @@ function connect() {
   let opacityValue = 1;
   for (let i = 0; i < particleArray.length; i++) {
     for (let j = i; j < particleArray.length; j++) {
+      const distanceA = Math.sqrt(
+        particleArray[i].MouseX * particleArray[i].MouseX +
+          particleArray[i].MouseY * particleArray[i].MouseY
+      );
+      const distanceB = Math.sqrt(
+        particleArray[j].MouseX * particleArray[j].MouseX +
+          particleArray[j].MouseY * particleArray[j].MouseY
+      );
       const distanceX = particleArray[i].x - particleArray[j].x;
       const distanceY = particleArray[i].y - particleArray[j].y;
       const distance = Math.sqrt(distanceX * distanceX + distanceY * distanceY);
-      if (distance < 40) {
+      if (distanceA < 150 && distanceB < 150) {
+        ctx.strokeStyle = "pink";
+        ctx.lineWidth = 5;
+        ctx.beginPath();
+        ctx.moveTo(particleArray[i].x, particleArray[i].y);
+        ctx.lineTo(particleArray[j].x, particleArray[j].y);
+        ctx.stroke();
+      } else if (distance < 40) {
         opacityValue = 1 - distance / 40;
         ctx.strokeStyle = "rgba(255,255,0," + opacityValue + ")";
         ctx.lineWidth = 1;
