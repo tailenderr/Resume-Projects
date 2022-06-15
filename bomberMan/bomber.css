@@ -1,0 +1,18 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  background-image: linear-gradient(to right, rgb(26, 26, 26), rgb(50, 51, 52));
+  text-align: center;
+  overflow: hidden;
+}
+#myCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#app {
+  margin-top: 230px;
+}
